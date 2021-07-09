@@ -10,6 +10,7 @@ public class Main {
 		}
 		System.out.println(ArLi.size());
 		ArLi.remove(2);
+
 		ArLi.remove(4);
 		for (int i = 0; i < 5; i++) {
 			System.out.println(ArLi.get(i).test);
