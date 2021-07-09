@@ -11,7 +11,6 @@ public class Main {
 		System.out.println(ArLi.size());
 		ArLi.remove(3);
 		ArLi.remove(4);
-		ArLi.remove(5);
 		for (int i = 0; i < 5; i++) {
 			System.out.println(ArLi.get(i).test);
 		}
