@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans  xmlns="http://www.springframework.org/schema/beans"
+        xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xmlns:context="http://www.springframework.org/schema/context"
+        xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd
+        http://www.springframework.org/schema/context
+        http://www.springframework.org/schema/context/spring-context.xsd">
+<context:property-placeholder location="classpath:musicPlauer.properties"/>
+   <!-- <bean id="musicBean"
+          class="main.java.ru.alishev.springcourse.JazeM">
+    </bean>-->
+<!--    <bean id="musicBean"-->
+<!--          class="main.java.ru.alishev.springcourse.RockMusic">-->
+<!--    </bean>-->
+    <bean id="mussss" class="main.java.ru.alishev.springcourse.ClassicalMusic"/>
+    <bean id="pro" class="main.java.ru.alishev.springcourse.RockMusic"/>
+    <bean id="haray" class="main.java.ru.alishev.springcourse.JazeM"/>
+    <bean id="pop" class="main.java.ru.alishev.springcourse.Pop"/>
+    <bean id="testt" class="main.java.ru.alishev.springcourse.MusicPlayer">
+<!--        <property name="music" ref="musicBean"/>-->
+        <property name="name" value="${musicPlauer.name}"/>
+        <property name="volume" value="${musicPlauer.volume}"/>
+        
+        <property name="musicList">
+            <list>
+               <ref bean="pro"/>
+                <ref bean="mussss"/>
+                <ref bean="haray"/>
+                <ref bean="pop"/>
+            </list>
+        </property>
+    </bean>
+<!--    <bean id="testt" class="main.java.ru.alishev.springcourse.MusicPlayer">-->
+<!--        <constructor-arg ref="musicBean"/>-->
+<!--    </bean>-->
+<!--    <bean id="tesss"-->
+<!--                   class="main.java.ru.alishev.springcourse.MusicPlayer">-->
+<!--                   <constructor-arg ref="musicBean"/>-->
+<!--    </bean>org-->
+</beans>
