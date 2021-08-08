@@ -20,7 +20,7 @@ public class Connector {
 		try {
 			Class.forName("com.mysql.cj.jdbc.Driver");
 
-			String URL = "jdbc:mysql://localhost/books";
+			String URL = "jdbc:mysql://localhost/company";
 			String USER = "kwas";
 			String PASSWORD = "Sql1234567890@";
 
@@ -39,12 +39,13 @@ public class Connector {
 			// st.execute(query);
 
 			while (rs.next()) {
-				int id = rs.getInt("id");
-				String namE = rs.getString("name");
-				int year = rs.getInt("year");
+				int id = rs.getInt("emp_id");
+				String namE = rs.getString("first_name");
+				String year = rs.getString("sex");
+				int wid = rs.getInt("emp_id");
 
 				// System.out.format("%d, %s, %d\n", id, namE, year);
-				strRes.add(id + " " + namE + " " + year + "\n");
+				strRes.add(id + " " + namE + " " + wid + year + "\n");
 			}
 
 			st.close();

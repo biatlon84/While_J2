@@ -26,9 +26,9 @@ public class Main {
 	public static void main(String args[]) {
 		Connector cn = new Connector();
 
-		cn.setS("metro", 1884);
+		// cn.setS("metro", 1884);
 
-		ArrayList<String> rs = new ArrayList<String>(cn.getS("SELECT * FROM lib"));
+		ArrayList<String> rs = new ArrayList<String>(cn.getS("SELECT * FROM employee"));
 
 		System.out.print(rs);
 	}
