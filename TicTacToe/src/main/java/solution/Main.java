@@ -7,6 +7,7 @@ public class Main {
 	public static char[] fild = new char[] { ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ', ' ' };
 	public static byte cat = 0;
 
+//t
 	public static void main(String[] args) {
 		int move = 10;
 		char player = 'O';
